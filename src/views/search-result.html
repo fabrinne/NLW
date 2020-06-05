@@ -1,0 +1,29 @@
+{% extends "partials/layout.html" %}
+{% set pageId = "page-search-results" %}
+
+{% block title %}
+    <title>Resultado da Pesquisa</title>
+{% endblock title %}
+{% block styles %}
+    <link rel="StyleSheet" href="css/search-results.css" type="text/css"/>
+{% endblock styles %}
+
+{% block content %}
+    {% include "partials/page-header.html" %}
+    <main>
+        <h4>
+            <b>2 pontos</b>
+            encontrados
+        </h4>
+        <div class="cards">
+            <div class="card"></div>
+        </div>
+    </main>
+{% endblock content %}
+
+{% block scripts %}
+    <script src="/scripts/create-point.js"></script>
+{% endblock scripts %}
+
+</body>
+</html>
