@@ -4,6 +4,7 @@ const sqlite3 = require("sqlite3").verbose()
 const db = new sqlite3.Database("./src/database/database.db")
 module.exports = db
 // utilizar o objeto de banco de dados para nossas operações
+ /*
 db.serialize(()=>{
     // construir tabela
     db.run(`
@@ -21,7 +22,7 @@ db.serialize(()=>{
     `)
   
     //inserir dados na tabela
-    /*
+   
     const query = `INSERT INTO places (
         image,
         name,
@@ -45,7 +46,7 @@ db.serialize(()=>{
 
     ]
     
-    */
+    
     const values = [
         "https://images.unsplash.com/photo-1567393528677-d6adae7d4a0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=800",
         "Papesider",
@@ -70,10 +71,10 @@ db.serialize(()=>{
     
     
     
-
+*/
     //consultar dados na tabela
 
-       
+   /*    
         const query = `SELECT * FROM places;` 
         db.all(query,function(err, rows){
             if(err){
@@ -82,8 +83,16 @@ db.serialize(()=>{
             console.log("aqui estão seus registros: ")
             console.log(rows)
         })
-       /*  */
+         */
 
     //deletar um dado da tabela
+/*  
+    db.run(`DELETE FROM places WHERE id = ?`, [] , function(err){
+        if (err) {
+            return console.log(err)
+        }
+        console.log("Registro deletado")
+    } )
     
 })
+*/
