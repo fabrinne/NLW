@@ -1,6 +1,9 @@
 const express = require("express")
 const server = express()
 
+// pegar o banco de dados
+
+//const db = require("./src/database/db")
 //pasta publica estatica
 
 server.use(express.static("public"))
