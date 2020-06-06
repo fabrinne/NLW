@@ -2,8 +2,7 @@ const express = require("express")
 const server = express()
 
 // pegar o banco de dados
-
-//const db = require("./src/database/db")
+const db = require("./database/db")
 //pasta publica estatica
 
 server.use(express.static("public"))
@@ -24,7 +23,20 @@ server.get("/create-point" , (req , res) =>{
     return res.render("create-point.html")
 })
 server.get("/search" , (req , res) =>{
-    return res.render("search-result.html")
+
+           
+        const query = `SELECT * FROM places;` 
+        db.all(query,function(err, rows){
+            if(err){
+                return console.log(err)
+            }
+            const total = rows.length
+            return res.render("search-result.html" , {places: rows , total})
+        })
+         
+
+
+    
 })
 
 
