@@ -4,7 +4,7 @@ const sqlite3 = require("sqlite3").verbose()
 const db = new sqlite3.Database("./src/database/database.db")
 module.exports = db
 // utilizar o objeto de banco de dados para nossas operações
- /*
+
 db.serialize(()=>{
     // construir tabela
     db.run(`
@@ -19,10 +19,10 @@ db.serialize(()=>{
             city TEXT,
             items TEXT
         );
-    `)
+    `)})
   
     //inserir dados na tabela
-   
+   /*
     const query = `INSERT INTO places (
         image,
         name,
@@ -33,7 +33,7 @@ db.serialize(()=>{
         items 
     ) VALUES (?,?,?,?,?,?,?);
     `
-          */
+           */
         /*
     const values = [
         "https://images.unsplash.com/photo-1528323273322-d81458248d40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1101&q=80",
